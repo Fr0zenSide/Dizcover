@@ -20,7 +20,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
+    User *myUser = [[User alloc] init:@"Jeoffrey"];
+    NSLog(@"myUser: %@", myUser);
 }
 
 - (void)didReceiveMemoryWarning

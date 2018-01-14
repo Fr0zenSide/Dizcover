@@ -16,6 +16,10 @@
 		5C1A7DAA1A65897200092761 /* DZRArtistSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1A7DA91A65897200092761 /* DZRArtistSearchViewController.m */; };
 		5C2E661A1A67C07E00607EC5 /* DZRArtist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E66191A67C07E00607EC5 /* DZRArtist.m */; };
 		5C2E661C1A67C3D500607EC5 /* DZRArtistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C2E661B1A67C3D500607EC5 /* DZRArtistTest.m */; };
+		803FFDE5200B4B8E008B8D30 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FFDE4200B4B8E008B8D30 /* Artist.swift */; };
+		803FFDE8200B4C33008B8D30 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FFDE7200B4C33008B8D30 /* Album.swift */; };
+		803FFDEA200B4C5C008B8D30 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FFDE9200B4C5C008B8D30 /* Sample.swift */; };
+		803FFDEC200B4C7F008B8D30 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FFDEB200B4C7F008B8D30 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,11 @@
 		5C2E66181A67C07E00607EC5 /* DZRArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZRArtist.h; sourceTree = "<group>"; };
 		5C2E66191A67C07E00607EC5 /* DZRArtist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZRArtist.m; sourceTree = "<group>"; };
 		5C2E661B1A67C3D500607EC5 /* DZRArtistTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZRArtistTest.m; sourceTree = "<group>"; };
+		803FFDE3200B4B8E008B8D30 /* DeezerExercice-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeezerExercice-Bridging-Header.h"; sourceTree = "<group>"; };
+		803FFDE4200B4B8E008B8D30 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		803FFDE7200B4C33008B8D30 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		803FFDE9200B4C5C008B8D30 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
+		803FFDEB200B4C7F008B8D30 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,18 +96,9 @@
 		5C1A7D811A6558BB00092761 /* DeezerExercice */ = {
 			isa = PBXGroup;
 			children = (
-				5C1A7D861A6558BB00092761 /* AppDelegate.h */,
-				5C1A7D871A6558BB00092761 /* AppDelegate.m */,
-				5C2E66181A67C07E00607EC5 /* DZRArtist.h */,
-				5C2E66191A67C07E00607EC5 /* DZRArtist.m */,
-				5C06C22D1A6E987F0051EF03 /* DZRArtistCollectionViewCell.h */,
-				5C06C22E1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m */,
-				5C1A7DA81A65897200092761 /* DZRArtistSearchViewController.h */,
-				5C1A7DA91A65897200092761 /* DZRArtistSearchViewController.m */,
-				5C1A7D8C1A6558BB00092761 /* Main.storyboard */,
-				5C1A7D8F1A6558BB00092761 /* Images.xcassets */,
-				5C1A7D911A6558BB00092761 /* LaunchScreen.xib */,
-				5C1A7D821A6558BB00092761 /* Supporting Files */,
+				803FFDDF200B49E7008B8D30 /* ViewControllers */,
+				803FFDE2200B4A4A008B8D30 /* Models */,
+				803FFDE6200B4BA7008B8D30 /* Project Data */,
 			);
 			path = DeezerExercice;
 			sourceTree = "<group>";
@@ -127,6 +127,60 @@
 				5C1A7D9D1A6558BC00092761 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		803FFDDF200B49E7008B8D30 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				803FFDE0200B49FC008B8D30 /* Home */,
+				803FFDE1200B4A0D008B8D30 /* Views */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		803FFDE0200B49FC008B8D30 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5C1A7DA81A65897200092761 /* DZRArtistSearchViewController.h */,
+				5C1A7DA91A65897200092761 /* DZRArtistSearchViewController.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		803FFDE1200B4A0D008B8D30 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5C06C22D1A6E987F0051EF03 /* DZRArtistCollectionViewCell.h */,
+				5C06C22E1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		803FFDE2200B4A4A008B8D30 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C2E66181A67C07E00607EC5 /* DZRArtist.h */,
+				5C2E66191A67C07E00607EC5 /* DZRArtist.m */,
+				803FFDE4200B4B8E008B8D30 /* Artist.swift */,
+				803FFDE7200B4C33008B8D30 /* Album.swift */,
+				803FFDE9200B4C5C008B8D30 /* Sample.swift */,
+				803FFDEB200B4C7F008B8D30 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		803FFDE6200B4BA7008B8D30 /* Project Data */ = {
+			isa = PBXGroup;
+			children = (
+				803FFDE3200B4B8E008B8D30 /* DeezerExercice-Bridging-Header.h */,
+				5C1A7D861A6558BB00092761 /* AppDelegate.h */,
+				5C1A7D871A6558BB00092761 /* AppDelegate.m */,
+				5C1A7D8C1A6558BB00092761 /* Main.storyboard */,
+				5C1A7D8F1A6558BB00092761 /* Images.xcassets */,
+				5C1A7D911A6558BB00092761 /* LaunchScreen.xib */,
+				5C1A7D821A6558BB00092761 /* Supporting Files */,
+			);
+			name = "Project Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +233,7 @@
 				TargetAttributes = {
 					5C1A7D7E1A6558BB00092761 = {
 						CreatedOnToolsVersion = 6.1.1;
+						LastSwiftMigration = 0920;
 					};
 					5C1A7D971A6558BC00092761 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -247,10 +302,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				803FFDE5200B4B8E008B8D30 /* Artist.swift in Sources */,
+				803FFDEA200B4C5C008B8D30 /* Sample.swift in Sources */,
 				5C1A7DAA1A65897200092761 /* DZRArtistSearchViewController.m in Sources */,
 				5C1A7D881A6558BB00092761 /* AppDelegate.m in Sources */,
 				5C1A7D851A6558BB00092761 /* main.m in Sources */,
+				803FFDEC200B4C7F008B8D30 /* User.swift in Sources */,
 				5C06C22F1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m in Sources */,
+				803FFDE8200B4C33008B8D30 /* Album.swift in Sources */,
 				5C2E661A1A67C07E00607EC5 /* DZRArtist.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -394,12 +453,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DeezerExercice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deezer.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				Packaging = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DeezerExercice/DeezerExercice-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -407,18 +472,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DeezerExercice/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.deezer.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				Packaging = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DeezerExercice/DeezerExercice-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		5C1A7DA61A6558BC00092761 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -439,6 +510,7 @@
 		5C1A7DA71A6558BC00092761 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
