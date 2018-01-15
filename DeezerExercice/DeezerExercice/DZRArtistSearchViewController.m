@@ -23,8 +23,15 @@
     
     User *myUser = [[User alloc] init:@"Jeoffrey"];
     NSLog(@"myUser: %@", myUser);
+    
     // fixme: if the next line doesn't work, we need to rename all id properties on swift by objectId
     NSLog(@"Have you a problem with that? %@", myUser.id);
+    
+    NSDictionary *dict = @{ @"id": [NSString stringWithFormat:@"%f-hi", CACurrentMediaTime()],
+                           @"name": @"lilo",
+                           @"photo": @"-" };
+    User *littleUser = [[User alloc] initWithJson:dict];
+    NSLog(@"littleUser: %@", littleUser);
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,24 +53,35 @@
 #pragma - Search
 
 - (void)searchArtistsWithName:(NSString *)name {
-    NSString *urlRequest = [NSString stringWithFormat:@"http://api.deezer.com/search/artist?q=%@", name];
-    NSURLRequest *APIRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlRequest]];
-
-    [NSURLConnection sendAsynchronousRequest:APIRequest
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                               if (connectionError) {
-                                   // TODO
-                               }
-                               else {
-                                   NSDictionary *retData = [NSJSONSerialization JSONObjectWithData:data
-                                                                                           options:kNilOptions
-                                                                                             error:&connectionError];
-                                   NSLog(@"%@", [retData objectForKey:@"data"]);
-                                   self.artists = [retData objectForKey:@"data"];
-                                   [self.collectionView reloadData];
-                               }
-                           }];
+    NSString *urlRequest = [NSString stringWithFormat:@"https://api.deezer.com/search?q=%@", name];
+    NSURLRequest *apiRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlRequest]];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:apiRequest
+                          completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                              
+                              if (error != nil) {
+                                  NSLog(@"Error! We haven't received data for the artist named: %@", name);
+                                  return;
+                              }
+                              if (data != nil) {
+                                  NSError *e;
+                                  NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&e];
+                                  if (e != nil) {
+                                      NSLog(@"Error! Parsing data error... for the artist named: %@", name);
+                                      return;
+                                  }
+                                  
+                                  NSLog(@"json: %@", json);
+                                  // todo: need to create a typed object for the artists
+                                  NSLog(@"%@", [json objectForKey:@"data"]);
+                                  dispatch_async(dispatch_get_main_queue(), ^{
+                                      self.artists = [json objectForKey:@"data"];
+                                      [self.collectionView reloadData];
+                                  });
+                              }
+                          }];
+    [task resume];
 }
 
 #pragma - UISearchBarDelegate
