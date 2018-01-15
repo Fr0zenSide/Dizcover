@@ -21,9 +21,10 @@
 {
     [super viewDidLoad];
     
-    // Do any additional setup after loading the view.
     User *myUser = [[User alloc] init:@"Jeoffrey"];
     NSLog(@"myUser: %@", myUser);
+    // fixme: if the next line doesn't work, we need to rename all id properties on swift by objectId
+    NSLog(@"Have you a problem with that? %@", myUser.id);
 }
 
 - (void)didReceiveMemoryWarning

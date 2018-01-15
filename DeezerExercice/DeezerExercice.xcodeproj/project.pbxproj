@@ -283,17 +283,18 @@
 /* Begin PBXShellScriptBuildPhase section */
 		803FFDDE200B453F008B8D30 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/swiftlint-output.log",
+				./swiftlint.log,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = ./scripts/swiftlint.sh;
+			shellScript = ./../scripts/swiftlint.sh;
 		};
 /* End PBXShellScriptBuildPhase section */
 

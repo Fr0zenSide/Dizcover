@@ -9,11 +9,18 @@
 import Foundation
 
 @objc public class User: NSObject {
+    // MARK: - Variables
+    // Private variables
+
+    // Public variables
+
     var id: String
     var name: String
     var photo: String?
     var favorites: [String]?
-    
+
+    // MARK: - Getter & Setter methods
+
     override public var description: String {
         var desc = super.description
         desc += " id: \(self.id),"
@@ -22,14 +29,21 @@ import Foundation
         desc += " favorites: \(self.favorites ?? [])"
         return desc
     }
-    
+
+    // MARK: - Constructors
+    /**
+     Method to create the manager of socket communications
+     
+     @param settings detail to launch the right sockets connection
+     @param delegate used to dispatch event from sockets activities
+     */
     init(_ name: String? = "John Doe") {
-        // FixMe: You can get also an uuid for the next line
+        // fixme: You can get also an uuid for the next line
         self.id = "\(CFAbsoluteTimeGetCurrent())-\(arc4random())"
         self.name = name ?? "_" // Some one try to declarate my user with a nill value...
         super.init()
     }
-    
+
     convenience init(_ name: String? = "John Doe", photo: String? = "-", favorites: [String]? = nil) {
         self.init(name)
         self.photo = photo
@@ -37,6 +51,7 @@ import Foundation
     }
 }
 
+// todo: Try to use struct with a convertor in ObjC later
 //struct User {
 //    var id: String
 //    var name: String
@@ -44,11 +59,10 @@ import Foundation
 //    var favorites: [String]?
 //    
 //    init(_ name: String? = "John Doe", photo: String? = "-", favorites: [String]? = nil) {
-//        // FixMe: You can get also an uuid for the next line
+//        // fixme: You can get also an uuid for the next line
 //        self.id = "\(CFAbsoluteTimeGetCurrent())-\(arc4random())"
 //        self.name = name ?? "_"
 //        self.photo = photo
 //        self.favorites = favorites
 //    }
 //}
-

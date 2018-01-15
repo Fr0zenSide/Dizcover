@@ -1,6 +1,9 @@
 #!/bin/bash
 
-cd ../
+# Move on directory of the parent of this script or our project
+DIR="$(dirname $0)/../"
+cd $DIR
+
 if which swiftlint >/dev/null; then
     count=0
     for file_path in $(git ls-files -om --exclude-from=.gitignore | grep ".swift$"); do
