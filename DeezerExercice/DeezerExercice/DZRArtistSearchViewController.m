@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     
-    User *myUser = [[User alloc] init:@"Jeoffrey"];
+    User *myUser = [[User alloc] init:@"Jeoffrey" photo:nil favorites:nil];
     NSLog(@"myUser: %@", myUser);
     
     // fixme: if the next line doesn't work, we need to rename all id properties on swift by objectId

@@ -20,6 +20,7 @@
 		803FFDE8200B4C33008B8D30 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FFDE7200B4C33008B8D30 /* Album.swift */; };
 		803FFDEA200B4C5C008B8D30 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FFDE9200B4C5C008B8D30 /* Sample.swift */; };
 		803FFDEC200B4C7F008B8D30 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FFDEB200B4C7F008B8D30 /* User.swift */; };
+		8063F165200DD20F0070DB52 /* AbstractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8063F164200DD20F0070DB52 /* AbstractModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		803FFDE7200B4C33008B8D30 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		803FFDE9200B4C5C008B8D30 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		803FFDEB200B4C7F008B8D30 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8063F164200DD20F0070DB52 /* AbstractModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 			children = (
 				5C2E66181A67C07E00607EC5 /* DZRArtist.h */,
 				5C2E66191A67C07E00607EC5 /* DZRArtist.m */,
+				8063F164200DD20F0070DB52 /* AbstractModel.swift */,
 				803FFDE4200B4B8E008B8D30 /* Artist.swift */,
 				803FFDE7200B4C33008B8D30 /* Album.swift */,
 				803FFDE9200B4C5C008B8D30 /* Sample.swift */,
@@ -310,6 +313,7 @@
 				5C1A7D851A6558BB00092761 /* main.m in Sources */,
 				803FFDEC200B4C7F008B8D30 /* User.swift in Sources */,
 				5C06C22F1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m in Sources */,
+				8063F165200DD20F0070DB52 /* AbstractModel.swift in Sources */,
 				803FFDE8200B4C33008B8D30 /* Album.swift in Sources */,
 				5C2E661A1A67C07E00607EC5 /* DZRArtist.m in Sources */,
 			);
