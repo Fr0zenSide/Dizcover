@@ -50,4 +50,8 @@ variable_name:
     - GlobalAPIKey
     - map
     - bar
+    - key
+    - val
+    - node
+    - child
 reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit)

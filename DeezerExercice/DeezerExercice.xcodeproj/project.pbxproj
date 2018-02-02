@@ -21,6 +21,11 @@
 		803FFDEA200B4C5C008B8D30 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FFDE9200B4C5C008B8D30 /* Sample.swift */; };
 		803FFDEC200B4C7F008B8D30 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803FFDEB200B4C7F008B8D30 /* User.swift */; };
 		8063F165200DD20F0070DB52 /* AbstractModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8063F164200DD20F0070DB52 /* AbstractModel.swift */; };
+		8063F16820106CDC0070DB52 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8063F16720106CDC0070DB52 /* NetworkEngine.swift */; };
+		80FE7EB6200F7988001B2B17 /* Artists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE7EB5200F7988001B2B17 /* Artists.swift */; };
+		80FE7EDB200FBF28001B2B17 /* ItemImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FE7ED9200FBF27001B2B17 /* ItemImageView.m */; };
+		80FE7EDE200FC02E001B2B17 /* UIView+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 80FE7EDC200FC02E001B2B17 /* UIView+Helpers.m */; };
+		80FE7EE2200FCDF6001B2B17 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 80FE7EE1200FCDF6001B2B17 /* Assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,13 @@
 		803FFDE9200B4C5C008B8D30 /* Sample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample.swift; sourceTree = "<group>"; };
 		803FFDEB200B4C7F008B8D30 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8063F164200DD20F0070DB52 /* AbstractModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractModel.swift; sourceTree = "<group>"; };
+		8063F16720106CDC0070DB52 /* NetworkEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngine.swift; sourceTree = "<group>"; };
+		80FE7EB5200F7988001B2B17 /* Artists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artists.swift; sourceTree = "<group>"; };
+		80FE7ED9200FBF27001B2B17 /* ItemImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemImageView.m; sourceTree = "<group>"; };
+		80FE7EDA200FBF28001B2B17 /* ItemImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemImageView.h; sourceTree = "<group>"; };
+		80FE7EDC200FC02E001B2B17 /* UIView+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helpers.m"; sourceTree = "<group>"; };
+		80FE7EDD200FC02E001B2B17 /* UIView+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Helpers.h"; sourceTree = "<group>"; };
+		80FE7EE1200FCDF6001B2B17 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +111,10 @@
 			isa = PBXGroup;
 			children = (
 				803FFDDF200B49E7008B8D30 /* ViewControllers */,
+				8063F16620106CAA0070DB52 /* Network */,
 				803FFDE2200B4A4A008B8D30 /* Models */,
+				80FE7EDF200FC032001B2B17 /* Utils */,
+				80FE7EE1200FCDF6001B2B17 /* Assets */,
 				803FFDE6200B4BA7008B8D30 /* Project Data */,
 			);
 			path = DeezerExercice;
@@ -164,6 +179,7 @@
 				5C2E66181A67C07E00607EC5 /* DZRArtist.h */,
 				5C2E66191A67C07E00607EC5 /* DZRArtist.m */,
 				8063F164200DD20F0070DB52 /* AbstractModel.swift */,
+				80FE7EB5200F7988001B2B17 /* Artists.swift */,
 				803FFDE4200B4B8E008B8D30 /* Artist.swift */,
 				803FFDE7200B4C33008B8D30 /* Album.swift */,
 				803FFDE9200B4C5C008B8D30 /* Sample.swift */,
@@ -184,6 +200,25 @@
 				5C1A7D821A6558BB00092761 /* Supporting Files */,
 			);
 			name = "Project Data";
+			sourceTree = "<group>";
+		};
+		8063F16620106CAA0070DB52 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8063F16720106CDC0070DB52 /* NetworkEngine.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		80FE7EDF200FC032001B2B17 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				80FE7EDA200FBF28001B2B17 /* ItemImageView.h */,
+				80FE7ED9200FBF27001B2B17 /* ItemImageView.m */,
+				80FE7EDD200FC02E001B2B17 /* UIView+Helpers.h */,
+				80FE7EDC200FC02E001B2B17 /* UIView+Helpers.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C1A7D8E1A6558BB00092761 /* Main.storyboard in Resources */,
+				80FE7EE2200FCDF6001B2B17 /* Assets in Resources */,
 				5C1A7D931A6558BB00092761 /* LaunchScreen.xib in Resources */,
 				5C1A7D901A6558BB00092761 /* Images.xcassets in Resources */,
 			);
@@ -308,10 +344,14 @@
 			files = (
 				803FFDE5200B4B8E008B8D30 /* Artist.swift in Sources */,
 				803FFDEA200B4C5C008B8D30 /* Sample.swift in Sources */,
+				8063F16820106CDC0070DB52 /* NetworkEngine.swift in Sources */,
 				5C1A7DAA1A65897200092761 /* DZRArtistSearchViewController.m in Sources */,
 				5C1A7D881A6558BB00092761 /* AppDelegate.m in Sources */,
+				80FE7EB6200F7988001B2B17 /* Artists.swift in Sources */,
 				5C1A7D851A6558BB00092761 /* main.m in Sources */,
 				803FFDEC200B4C7F008B8D30 /* User.swift in Sources */,
+				80FE7EDB200FBF28001B2B17 /* ItemImageView.m in Sources */,
+				80FE7EDE200FC02E001B2B17 /* UIView+Helpers.m in Sources */,
 				5C06C22F1A6E987F0051EF03 /* DZRArtistCollectionViewCell.m in Sources */,
 				8063F165200DD20F0070DB52 /* AbstractModel.swift in Sources */,
 				803FFDE8200B4C33008B8D30 /* Album.swift in Sources */,
